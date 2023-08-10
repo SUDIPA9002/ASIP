@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Prediction</title>
+</head>
+<style>
+    body{
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        display: flex; /* Add display flex to body to enable flexbox layout */
+        justify-content: right; /* Center the form horizontally */
+        align-items: center; /* Center the form vertically */
+        height: 100vh; /* Set the height of the body to the viewport height */
+    }
+
+    .form {
+            padding: 3%;
+            background-color: white;
+            border-radius: 1rem;
+            width: 30%;
+            font-family: math;
+            text-align: center;
+
+    }
+</style>
+
+<body>
+    <div class="form">
+        <u><h1>Titanic Survival Prediction</h1></u>
+        <form action="/predict" method="post">
+            <p><label for="pclass">Pclass:</label>
+            <input type="number" id="pclass" name="Pclass" required><br></p>
+
+            <p><label for="sex">Sex:</label>
+            <select id="sex" name="Sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br></p>
+
+            <p><label for="age">Age:</label>
+            <input type="number" id="age" name="Age" required><br></p>
+
+            <p><label for="fare">Fare:</label>
+            <input type="number" id="fare" name="Fare" required><br></p>
+
+            <p><label for="embarked">Embarked:</label>
+            <select id="embarked" name="Embarked" required>
+                <option value="S">S</option>
+                <option value="C">C</option>
+                <option value="Q">Q</option>
+            </select><br></p>
+
+            <p><input type="submit" value="Predict"></p>
+        </form>
+
+        {% if results %}
+            <h2>Prediction Results:</h2>
+            <ul class="pred">
+                {% for result in results %}
+                    <li>{{ result }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if error_message %}
+            <p>Error: {{ error_message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
