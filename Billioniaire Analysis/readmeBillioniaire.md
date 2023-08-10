@@ -19,11 +19,11 @@ This repository contains Python code for analyzing the "billionaires" dataset us
   - [Age Distribution by Wealth Source](#age-distribution-by-wealth-source)
   - [Wealth Distribution by Location GDP](#wealth-distribution-by-location-gdp)
 
-## Dataset : https://www.kaggle.com/datasets/roysouravcu/forbes-billionaires-of-2021
+### Dataset : https://www.kaggle.com/datasets/roysouravcu/forbes-billionaires-of-2021
 
 The dataset used for analysis is `billionaires.csv`. It contains information about various attributes of billionaires.
 
-## Requirements
+### Requirements
 To run the code, you need to have the following libraries installed:
 - NumPy
 - Pandas
@@ -38,10 +38,10 @@ You can install these libraries using the following command:
 3. Run the provided code in a Python environment that has the required libraries installed.
 4. The code will generate visualizations and insights based on the dataset.
 
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 The initial part of the code performs exploratory data analysis (EDA) on the dataset. It includes functions to display information about the dataset's shape, data types, and missing values.
 
-## Visualizations
+### Visualizations
 The code generates several visualizations to help understand the dataset's characteristics:
 
 ### Correlation Heatmap
